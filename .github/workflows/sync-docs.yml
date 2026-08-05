@@ -1,0 +1,37 @@
+name: Sync docs from public
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public/**"
+      - ".github/workflows/sync-docs.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  sync-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Sync public to docs
+        run: |
+          mkdir -p docs
+          rsync -av --delete public/ docs/
+          touch docs/.nojekyll
+
+      - name: Commit and push changes
+        run: |
+          if git diff --quiet -- docs; then
+            echo "No docs changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "chore: sync docs from public"
+          git push

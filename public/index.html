@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Ethan Bennett | AI Developer & Builder</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan Bennett | AI Developer</title>
     <meta name="description"
-        content="Portfolio of Ethan Bennett, an AI developer, cloud builder, amateur radio operator, and jiu-jitsu practitioner.">
+        content="Ethan Bennett - Python-focused AI Developer building production-grade cloud applications, CI/CD pipelines, and generative AI platforms.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,54 +15,194 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body><a class="skip" href="#main">Skip to content</a>
+<body>
+
     <nav class="nav">
-        <div class="nav-inner"><a class="brand" href="index.html">EB</a>
-            <div class="nav-links"><a class="keep" href="index.html" aria-current="page">Home</a><a
-                    href="recruiter.html">Recruiter</a><a href="projects.html">Projects</a><a
-                    href="radio.html">Radio</a><a href="jiujitsu.html">Jiu-Jitsu</a></div>
-            <div class="mode-switch"><a href="recruiter.html" class="">Recruiter</a><a href="projects.html"
-                    class="">Explore</a></div>
+        <div class="nav-inner">
+            <a class="brand" href="#top">EB</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
     </nav>
-    <main id="main">
-        <header class="hero">
-            <div class="wrap">
-                <p class="eyebrow">Developer · Builder · Problem Solver</p>
-                <h1>ETHAN BENNETT</h1>
-                <p class="lead">I build AI-powered cloud applications—and spend the rest of my time learning how systems
-                    work, from radio waves and Linux servers to leverage, timing, and pressure on the jiu-jitsu mat.</p>
-                <div class="actions"><a class="btn primary" href="recruiter.html">I’m a Recruiter</a><a class="btn"
-                        href="projects.html">Explore My Work & Hobbies</a></div>
+
+    <header class="hero" id="top">
+        <div class="sun"></div>
+        <div class="grid-floor"></div>
+        <div class="hero-content">
+            <h1>ETHAN BENNETT</h1>
+            <div class="subtitle">AI Developer</div>
+            <p class="tagline">Python-focused developer building production generative-AI systems with Google Cloud,
+                Firebase, Docker, CI/CD, APIs, and full-stack troubleshooting.</p>
+            <div class="cta-row">
+                <a class="btn primary" href="#projects">View Projects</a>
+                <a class="btn" href="#contact">Get In Touch</a>
             </div>
-        </header>
-        <section>
-            <div class="wrap">
-                <h2 class="section-title">Choose your route</h2>
-                <p class="section-intro">No scavenger hunt required. The professional path is optimized for a fast
-                    hiring review; the personal path shows the projects and interests behind the résumé.</p>
-                <div class="grid"><a class="card wide" href="recruiter.html" style="text-decoration:none">
-                        <div class="icon">💼</div>
-                        <h3>Recruiter View</h3>
-                        <p>Experience, impact, skills, cloud architecture, featured work, and direct contact information
-                            in a quick-scanning format.</p>
-                        <div class="tags"><span class="tag">Python</span><span class="tag">GCP</span><span
-                                class="tag">AI APIs</span><span class="tag">CI/CD</span></div>
-                    </a><a class="card wide" href="projects.html" style="text-decoration:none">
-                        <div class="icon">🛰️</div>
-                        <h3>Explore Ethan</h3>
-                        <p>Generative AI, homelab builds, amateur radio, jiu-jitsu, CNC machining, and the hands-on
-                            projects that keep me curious.</p>
-                        <div class="tags"><span class="tag">Ham Radio</span><span class="tag">Homelab</span><span
-                                class="tag">Jiu-Jitsu</span><span class="tag">Making</span></div>
-                    </a></div>
+        </div>
+    </header>
+
+    <section id="about" class="reveal">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <p class="about-text">
+            I am a Python-focused AI developer with experience building <strong>production-grade cloud applications</strong>,
+            automation, and DevOps workflows. I specialize in <strong>Python microservices</strong>,
+            <strong>Google Cloud Run</strong>, <strong>CI/CD pipelines</strong>, and <strong>Docker</strong> - developing and
+            deploying containerized applications, integrating AI APIs, and collaborating across the full software development
+            lifecycle. I transitioned from precision CNC machining into software and AI, bringing a production mindset:
+            diagnose carefully, document clearly, and build systems that work outside the demo.
+        </p>
+    </section>
+
+    <section id="experience" class="reveal">
+        <h2 class="section-title">Work <span>Experience</span></h2>
+        <div class="exp-card">
+            <div class="exp-header">
+                <h3>Lava Studios AI</h3>
+                <span class="period">2024 - Present</span>
             </div>
-        </section>
-    </main>
-    <footer class="footer">© <span id="year"></span> Ethan Bennett · Built with curiosity, stubborn debugging, and
-        probably too many Docker logs.
-        <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+            <div class="exp-role">AI Developer · Remote - Building a multi-engine generative media platform with Google Cloud,
+                Python microservices, and FlutterFlow.</div>
+            <div class="exp-grid">
+                <div class="exp-item">
+                    <h4>Generative AI Integration</h4>
+                    <p>Connected image and video providers including Leonardo, Luma, Runway, Replicate-hosted models, and
+                        Google-based models behind unified application workflows.</p>
+                </div>
+                <div class="exp-item">
+                    <h4>Cloud Architecture</h4>
+                    <p>Built and deployed containerized services on Cloud Run with Secret Manager, Firebase authentication,
+                        Firestore data models, Storage pipelines, and webhook routing.</p>
+                </div>
+                <div class="exp-item">
+                    <h4>CI/CD Pipeline Engineering</h4>
+                    <p>Implemented Docker-based GitHub and Cloud Build deployment workflows, staged rollouts, logging,
+                        monitoring, and multi-service troubleshooting.</p>
+                </div>
+                <div class="exp-item">
+                    <h4>Product Engineering</h4>
+                    <p>Created custom FlutterFlow actions, authenticated API calls, generation history flows, Stripe lifecycle
+                        handling, and resilient asynchronous processing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="reveal">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="p-icon">Cloud</div>
+                <h3>Generative Media Platform</h3>
+                <p>Production multi-provider image and video generation platform using Python, Cloud Run, Firebase, Docker,
+                    asynchronous callbacks, and Stripe.</p>
+                <div class="p-tags">
+                    <span class="tag">Python</span><span class="tag">GCP</span><span class="tag">GenAI</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="p-icon">Lab</div>
+                <h3>Home Media and Homelab Stack</h3>
+                <p>Designed and maintained Docker-based media services with Jellyfin, Sonarr, Radarr, qBittorrent, Tailscale,
+                    SMB, Linux permissions, and automated storage workflows.</p>
+                <div class="p-tags">
+                    <span class="tag">Docker</span><span class="tag">Linux</span><span class="tag">Networking</span>
+                </div>
+            </div>
+            <a class="project-card" href="radio.html">
+                <div class="p-icon">RF</div>
+                <h3>Amateur Radio</h3>
+                <p>General-class operator KM7CPJ exploring HF, satellites, emergency communications, antennas, digital modes,
+                    Meshtastic, and portable operations.</p>
+                <div class="p-tags">
+                    <span class="tag">HF</span><span class="tag">Emergency Comms</span><span class="tag">Meshtastic</span>
+                </div>
+            </a>
+            <a class="project-card" href="jiujitsu.html">
+                <div class="p-icon">BJJ</div>
+                <h3>Brazilian Jiu-Jitsu</h3>
+                <p>A long-term practice in calm problem solving, humility, adaptation, and disciplined iteration under
+                    pressure.</p>
+                <div class="p-tags">
+                    <span class="tag">Mindset</span><span class="tag">Discipline</span><span class="tag">Adaptation</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="skills" class="reveal">
+        <h2 class="section-title">Skills <span>and Tech</span></h2>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h3>Languages</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Dart (FlutterFlow)</li>
+                    <li>HTML and CSS</li>
+                    <li>Fanuc CNC (7 years)</li>
+                    <li>Spanish</li>
+                </ul>
+            </div>
+            <div class="skill-group">
+                <h3>Cloud and Deployment</h3>
+                <ul>
+                    <li>Google Cloud Run</li>
+                    <li>Cloud Functions</li>
+                    <li>Firestore and Firebase Storage</li>
+                    <li>Secret Manager</li>
+                    <li>Docker</li>
+                </ul>
+            </div>
+            <div class="skill-group">
+                <h3>DevOps and Tooling</h3>
+                <ul>
+                    <li>GitHub Actions CI/CD</li>
+                    <li>Cloud Build workflows</li>
+                    <li>Git and GitHub</li>
+                    <li>Logging and monitoring pipelines</li>
+                </ul>
+            </div>
+            <div class="skill-group">
+                <h3>Engineering</h3>
+                <ul>
+                    <li>REST APIs and webhooks</li>
+                    <li>OAuth and JWT auth flows</li>
+                    <li>Stripe billing lifecycle handling</li>
+                    <li>Cross-stack debugging and architecture ownership</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact reveal">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <p>Open to AI, Python, cloud, platform engineering, and technically ambitious product roles.</p>
+        <div class="contact-links">
+            <a class="btn primary" href="mailto:ethanbennett136@gmail.com">Email Me</a>
+            <a class="btn" href="https://www.linkedin.com/in/ethan-bennett-7599742a1" target="_blank"
+                rel="noopener">LinkedIn</a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; <span id="year"></span> Ethan Bennett · Built with <span class="heart">&#9829;</span> and deployed on Firebase
     </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+
 </body>
 
 </html>
