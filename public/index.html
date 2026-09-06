@@ -7,19 +7,15 @@
     <title>Ethan Bennett | AI Developer</title>
     <meta name="description"
         content="Ethan Bennett - Python-focused AI Developer building production-grade cloud applications, CI/CD pipelines, and generative AI platforms.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="home">
+    <a class="skip" href="#main">Skip to content</a>
 
     <nav class="nav">
         <div class="nav-inner">
-            <a class="brand" href="#top">EB</a>
+            <a class="brand" href="#top"><span class="brand-mark">e.</span> <span>Ethan Bennett</span></a>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
@@ -30,23 +26,36 @@
         </div>
     </nav>
 
-    <header class="hero" id="top">
-        <div class="sun"></div>
-        <div class="grid-floor"></div>
-        <div class="hero-content">
-            <h1>ETHAN BENNETT</h1>
-            <div class="subtitle">AI Developer</div>
-            <p class="tagline">Python-focused developer building production generative-AI systems with Google Cloud,
-                Firebase, Docker, CI/CD, APIs, and full-stack troubleshooting.</p>
-            <div class="cta-row">
-                <a class="btn primary" href="#projects">View Projects</a>
-                <a class="btn" href="#contact">Get In Touch</a>
+    <main id="main">
+    <header class="hero home-hero" id="top">
+        <div class="hero-layout">
+            <div class="hero-content">
+                <p class="eyebrow"><span class="status-dot"></span> AI developer &amp; cloud engineer</p>
+                <h1>From possibility.<br>To <span class="accent-text">production.</span></h1>
+                <p class="tagline">I'm Ethan. I build AI-powered products and the cloud systems behind them. Thoughtful integrations. Reliable infrastructure. Software that works outside the demo.</p>
+                <div class="cta-row">
+                    <a class="btn primary" href="#projects">Explore my work <span aria-hidden="true">&#8599;</span></a>
+                    <a class="btn" href="recruiter.html">Experience &amp; skills <span aria-hidden="true">&#8599;</span></a>
+                </div>
+                <p class="hero-note">Python at the core. Curiosity everywhere else.</p>
             </div>
+            <aside class="system-panel" aria-label="My engineering focus: product workflows, Python services, and cloud infrastructure">
+                <div class="panel-heading"><span><span class="status-dot"></span> The systems I build</span><span class="mono">PRODUCT / CLOUD</span></div>
+                <div class="system-body">
+                    <div class="system-node"><span class="node-icon">&#8599;</span><div><strong>Product &amp; experience</strong><small>Generative media &middot; Application workflows</small></div><span class="node-index">01</span></div>
+                    <div class="connector"><span>APIs &amp; asynchronous events</span></div>
+                    <div class="system-node selected"><span class="node-icon">&#8984;</span><div><strong>Python services</strong><small>AI integrations &middot; Webhooks &middot; Automation</small></div><span class="node-index">02</span></div>
+                    <div class="connector"><span>Containerized &amp; connected</span></div>
+                    <div class="system-node"><span class="node-icon">&#9636;</span><div><strong>Cloud infrastructure</strong><small>Cloud Run &middot; Firebase &middot; Docker</small></div><span class="node-index">03</span></div>
+                </div>
+                <div class="panel-footer"><span class="status-dot"></span> Built with a production mindset <span aria-hidden="true">&#8599;</span></div>
+            </aside>
         </div>
+        <div class="stack-strip"><span class="mono">MY EVERYDAY TOOLKIT</span><span>Python</span><span>Google Cloud</span><span>Firebase</span><span>Docker</span><span>GitHub Actions</span></div>
     </header>
 
     <section id="about" class="reveal">
-        <h2 class="section-title">About <span>Me</span></h2>
+        <p class="eyebrow">01 / The person behind the code</p><h2 class="section-title">A builder, by background.</h2>
         <p class="about-text">
             I am a Python-focused AI developer with experience building <strong>production-grade cloud applications</strong>,
             automation, and DevOps workflows. I specialize in <strong>Python microservices</strong>,
@@ -58,7 +67,7 @@
     </section>
 
     <section id="experience" class="reveal">
-        <h2 class="section-title">Work <span>Experience</span></h2>
+        <p class="eyebrow">02 / In practice</p><h2 class="section-title">Real products. Real responsibility.</h2>
         <div class="exp-card">
             <div class="exp-header">
                 <h3>Lava Studios AI</h3>
@@ -92,7 +101,7 @@
     </section>
 
     <section id="projects" class="reveal">
-        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="section-heading"><div><p class="eyebrow">03 / Work &amp; curiosity</p><h2 class="section-title">Things I build. Things I explore.</h2></div><a class="text-link" href="projects.html">All projects <span aria-hidden="true">&#8599;</span></a></div>
         <div class="projects-grid">
             <div class="project-card">
                 <div class="p-icon">Cloud</div>
@@ -134,7 +143,7 @@
     </section>
 
     <section id="skills" class="reveal">
-        <h2 class="section-title">Skills <span>and Tech</span></h2>
+        <p class="eyebrow">04 / The toolkit</p><h2 class="section-title">Tools with a purpose.</h2>
         <div class="skills-grid">
             <div class="skill-group">
                 <h3>Languages</h3>
@@ -178,7 +187,7 @@
     </section>
 
     <section id="contact" class="contact reveal">
-        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <p class="eyebrow">Have something in mind?</p><h2 class="section-title">Let&#8217;s build something useful.</h2>
         <p>Open to AI, Python, cloud, platform engineering, and technically ambitious product roles.</p>
         <div class="contact-links">
             <a class="btn primary" href="mailto:ethanbennett136@gmail.com">Email Me</a>
@@ -187,6 +196,7 @@
         </div>
     </section>
 
+    </main>
     <footer>
         &copy; <span id="year"></span> Ethan Bennett · Built with <span class="heart">&#9829;</span> and deployed on Firebase
     </footer>
