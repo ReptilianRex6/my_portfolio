@@ -1000,13 +1000,13 @@ section {
 .belt-stripes {
     flex:1;
     display:flex;
-    gap:9px;
+    gap:15px;
     padding:0 12px;
     background:#06090d;
 }
 
 .belt-stripes>.earned {
-    width:20px;
+    width:15px;
     background:linear-gradient(90deg,#e1e5e9,#f7f8fa 22%,#f0f3f6 78%,#dde2e7);
 }
 
