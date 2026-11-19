@@ -35,6 +35,6 @@ Set `draft: false` when the note is ready. The production build drops drafts fro
 
 ## Build and deploy
 
-Run `npm run build` to generate the public site in `_site/`. The Firebase workflow builds before deploying. The Firebase project ID in the workflow is still a placeholder and needs a configured project before that path can deploy.
+Run `npm run build` to generate the public site in `_site/`. Pull requests run that same build. Firebase Hosting deploys only after `.firebaserc` has a real project id (it is still `YOUR_FIREBASE_PROJECT_ID`) and the `FIREBASE_SERVICE_ACCOUNT` secret is set. Until then the workflow builds the site and skips the deploy.
 
 The GitHub Pages setup uses `main` and `/docs`, including `docs/.nojekyll`. The sync workflow mirrors a production build into `docs/` after changes under `public/` land on `main`. A production build does not include drafts.
