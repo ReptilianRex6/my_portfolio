@@ -1,94 +1,77 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Amateur Radio | Ethan Bennett KM7CPJ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amateur radio | Ethan Bennett</title>
     <meta name="description" content="Amateur radio interests and station of Ethan Bennett, KM7CPJ.">
+    
+    <meta name="theme-color" content="#f3efe6">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
 </head>
-
-<body><a class="skip" href="#main">Skip to content</a>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-    <div class="nav-inner">
-        <a class="brand" href="index.html"><span class="brand-mark">e.</span> <span>Ethan Bennett</span></a>
+        <a class="brand" href="index.html">
+            <span class="mark" aria-hidden="true"></span>
+            <span>Ethan Bennett</span>
+        </a>
         <div class="nav-links">
             <a href="projects.html">Work</a>
-            <a href="notes/">Build Notes</a>
+            <a href="notes/">Notes</a>
             <a href="recruiter.html">Experience</a>
-            <a href="index.html#contact">Contact</a>
+            <a href="index.html#about">About</a>
+            <a class="nav-contact" href="index.html#contact">Contact</a>
         </div>
-    </div>
-</nav>
+    </nav>
+</header>
 
     <main id="main">
-        <header class="hero">
-            <div class="wrap">
-                <p class="eyebrow">Amateur Radio · KM7CPJ</p>
-                <h1>Making connections.<br>Beyond the internet.</h1>
-                <p class="lead">I enjoy the strange magic of sending a signal into a wire and having another human hear
-                    it hundreds—or thousands—of miles away.</p>
-                <div class="actions">
-                    <a class="btn primary" href="https://www.qrz.com/db/KM7CPJ" target="_blank" rel="noopener noreferrer">KM7CPJ on QRZ <span aria-hidden="true">&#8599;</span><span class="sr-only"> (opens in a new tab)</span></a>
-                </div>
-            </div>
-        </header>
-        <section>
-            <div class="wrap">
-                <div class="split">
-                    <div>
-                        <h2 class="section-title">Why Radio?</h2>
-                        <p class="section-intro">Amateur radio combines electronics, networking, emergency readiness,
-                            experimentation, and community service. It scratches the same itch as software: understand
-                            the system, reduce noise, and make a reliable connection.</p>
-                        <p class="callout">Licensed General-class amateur radio operator. Callsign:
-                            <strong>KM7CPJ</strong>.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Current Interests</h3>
-                        <ul>
-                            <li>HF voice and digital communication</li>
-                            <li>Parks on the Air portable operation</li>
-                            <li>Satellite and ISS contacts</li>
-                            <li>ARES and emergency communications</li>
-                            <li>Antenna construction and tuning</li>
-                            <li>Meshtastic and off-grid data networks</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="wrap">
-                <h2 class="section-title">Radio Bench</h2>
-                <div class="grid">
-                    <div class="card">
-                        <h3>Primary Station</h3>
-                        <p>Yaesu FT-991A all-mode transceiver, antenna analyzer, tuner, and multi-band antenna
-                            experimentation.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Portable Operations</h3>
-                        <p>LiFePO4 power, compact field kits, portable antennas, logging, and practical POTA setup
-                            planning.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Digital & Mesh</h3>
-                        <p>FreeDV, packet/VARA experimentation, Raspberry Pi possibilities, Meshtastic nodes, and
-                            resilient local communications.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="wrap"><a class="back-link" href="projects.html">← Back to projects and interests</a></div>
-        </section>
-    </main>
-    <footer class="footer">© <span id="year"></span> Ethan Bennett · Built with curiosity, stubborn debugging, and
-        probably too many Docker logs.
-        <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
-    </footer>
-</body>
+        <header class="page-hero">
+    <p class="kicker">Amateur radio · KM7CPJ</p>
+    <h1>A signal in a wire, and another person on the other end.</h1>
+    <p class="lede">Licensed General-class operator. Callsign KM7CPJ. The web tools around the hobby have their own note.</p>
+    <div class="cta-row">
+        <a class="btn" href="https://www.qrz.com/db/KM7CPJ" rel="noopener noreferrer">KM7CPJ on QRZ</a>
+        <a class="btn btn-ghost" href="notes/radio-tools/">Radio tools note</a>
+    </div>
+</header>
+<section class="section">
+    <div class="about-grid">
+        <div class="prose">
+            <h2>Why radio</h2>
+            <p>It mixes electronics, antennas, emergency readiness, and a community that will tell you when your signal is bad. That last part is the same as software: reduce the noise and make a connection you can count on.</p>
+            <p>The station today is a Yaesu FT-991A, an antenna analyzer, a tuner, and whatever wire I am trying this month. Portable work is a battery, a compact kit, and a plan for Parks on the Air. Digital experiments include FreeDV, packet, and Meshtastic nodes for when the internet is not the path.</p>
+        </div>
+        <aside class="aside-card">
+            <h3>Current interests</h3>
+            <ul>
+                <li>HF voice and digital</li>
+                <li>Parks on the Air</li>
+                <li>Satellite and ISS contacts</li>
+                <li>ARES and emergency communications</li>
+                <li>Antenna building and tuning</li>
+                <li>Meshtastic and off-grid data</li>
+            </ul>
+        </aside>
+    </div>
+</section>
+<section class="section">
+    <p class="back"><a href="projects.html">Back to work</a></p>
+</section>
 
+    </main>
+    <footer class="site-footer">
+    <div class="footer-inner">
+        <p>© <span id="year">2026</span> Ethan Bennett</p>
+        <p><a href="mailto:ethanbennett136@gmail.com">ethanbennett136@gmail.com</a></p>
+    </div>
+</footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
 </html>

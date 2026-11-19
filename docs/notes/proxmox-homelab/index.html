@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proxmox homelab | Ethan Bennett</title>
+    <meta name="description" content="A Proxmox host and a NAS for files, media, and a few services I actually use. This note stays off the network map.">
+    
+    <meta name="theme-color" content="#f3efe6">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="../../index.html">
+            <span class="mark" aria-hidden="true"></span>
+            <span>Ethan Bennett</span>
+        </a>
+        <div class="nav-links">
+            <a href="../../projects.html">Work</a>
+            <a href="../" aria-current="page">Notes</a>
+            <a href="../../recruiter.html">Experience</a>
+            <a href="../../index.html#about">About</a>
+            <a class="nav-contact" href="../../index.html#contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+    <main id="main">
+        <article class="study">
+    <p class="back"><a href="../">All notes</a></p>
+    <p class="study-kicker">
+        <span class="status status-shipped">Shipped</span>
+        
+    </p>
+    <h1>Proxmox homelab</h1>
+    <p class="lede">A Proxmox host and a NAS for files, media, and a few services I actually use. This note stays off the network map.</p>
+    <dl class="facts">
+        
+        <div>
+            <dt>Role</dt>
+            <dd>I design it, run it, and fix it when it breaks.</dd>
+        </div>
+        
+        <div>
+            <dt>Written</dt>
+            <dd>Nov 19, 2026</dd>
+        </div>
+        
+        
+    </dl>
+    <div class="study-body">
+        <h2>The problem</h2>
+<p>I wanted one place for the services I use at home: files, media, name resolution, and a way to reach them when I am not there. A pile of one-off installs is easy to start and miserable to put back. The lab is where I practice the unglamorous part. Where does the data live, what does a service depend on, and how would I rebuild it?</p>
+<h2>What I built</h2>
+<p>Two roles, and no map.</p>
+<p>A Proxmox host runs the always-on services. A separate NAS holds the files and the media library. Media that used to live on a portable laptop is moving onto the NAS. The laptop was a useful experiment. The NAS is where I want that library to stay.</p>
+<p>Jellyfin serves the library. A personal cloud (Nextcloud) and file sync cover the files I want on more than one device. I run my own DNS resolver, a small homepage, and an uptime check so I notice when something is down. Remote access is Tailscale, not a set of ports forwarded on the router.</p>
+<p>I am not publishing addresses, hostnames, or a topology diagram. The point of this note is the split between compute and storage, not a map of my house.</p>
+<h2>Tools</h2>
+<p>Proxmox is the host because I want a line between a service and the machine under it. Docker is for the apps that are happier as containers. The NAS is for data I do not want trapped inside a container.</p>
+<h2>Outcome</h2>
+<p>The lab is running and I use it. It is not a finished build. A single reverse proxy in front of the services is still a plan. So is an offsite backup. I have not written up a restore I have actually tested, so I will not claim I can rebuild the whole thing from scratch.</p>
+<p>What I learned: decide where the data lives before you add another container. Moving a media library later is the slow part.</p>
+<h2>Still open</h2>
+<ul>
+<li>One front door for the services, instead of remembering how each one is reached.</li>
+<li>An offsite backup, and a restore I have tried.</li>
+<li>Follow-up notes on DNS and the personal cloud, still without a network map.</li>
+</ul>
+<!-- TODO: If you add a diagram, draw roles only: host, storage, remote access. No addresses, hostnames, or interface names. -->
+
+    </div>
+</article>
+
+    </main>
+    <footer class="site-footer">
+    <div class="footer-inner">
+        <p>© <span id="year">2026</span> Ethan Bennett</p>
+        <p><a href="mailto:ethanbennett136@gmail.com">ethanbennett136@gmail.com</a></p>
+    </div>
+</footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

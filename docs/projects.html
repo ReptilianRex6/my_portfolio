@@ -1,95 +1,144 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Projects & Interests | Ethan Bennett</title>
-    <meta name="description"
-        content="Projects, homelab work, radio, jiu-jitsu, and technical interests of Ethan Bennett.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Work | Ethan Bennett</title>
+    <meta name="description" content="Case studies and interests from Ethan Bennett. Each project is labeled shipped, prototype, or planned.">
+    
+    <meta name="theme-color" content="#f3efe6">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
 </head>
-
-<body><a class="skip" href="#main">Skip to content</a>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-    <div class="nav-inner">
-        <a class="brand" href="index.html"><span class="brand-mark">e.</span> <span>Ethan Bennett</span></a>
+        <a class="brand" href="index.html">
+            <span class="mark" aria-hidden="true"></span>
+            <span>Ethan Bennett</span>
+        </a>
         <div class="nav-links">
             <a href="projects.html" aria-current="page">Work</a>
-            <a href="notes/">Build Notes</a>
+            <a href="notes/">Notes</a>
             <a href="recruiter.html">Experience</a>
-            <a href="index.html#contact">Contact</a>
+            <a href="index.html#about">About</a>
+            <a class="nav-contact" href="index.html#contact">Contact</a>
         </div>
-    </div>
-</nav>
+    </nav>
+</header>
 
     <main id="main">
-        <header class="hero">
-            <div class="wrap">
-                <p class="eyebrow">Projects & Interests</p>
-                <h1>A little curiosity.<br>A lot of building.</h1>
-                <p class="lead">A wider look at what I build, troubleshoot, operate, and obsessively research after
-                    saying, “this should be easy.”</p>
-            </div>
-        </header>
-        <section>
-            <div class="wrap">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="grid">
-                    <div class="card wide">
-                        <div class="icon">🌋</div>
-                        <h3>Aisthetic Studio</h3>
-                        <p>Production multi-provider image and video generation platform using Python, Cloud Run,
-                            Firebase, Docker, asynchronous callbacks, and Stripe.</p>
-                        <div class="tags"><span class="tag">Python</span><span class="tag">GCP</span><span
-                                class="tag">GenAI</span></div>
-                    </div>
-                    <div class="card wide">
-                        <div class="icon">🖥️</div>
-                        <h3>Proxmox homelab</h3>
-                        <p>Designed and maintained Docker-based media services with Jellyfin, Sonarr, Radarr,
-                            qBittorrent, Tailscale, SMB, Linux permissions, and automated storage workflows.</p>
-                        <div class="tags"><span class="tag">Docker</span><span class="tag">Linux</span><span
-                                class="tag">Networking</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="wrap">
-                <h2 class="section-title">Interests</h2>
-                <div class="grid">
-                    <a class="card wide" href="radio.html" style="text-decoration:none">
-                        <div class="icon">📻</div>
-                        <h3>Amateur Radio</h3>
-                        <p>General-class operator KM7CPJ exploring HF, satellites, emergency communications, antennas,
-                            digital modes, Meshtastic, and portable operations.</p>
-                    </a><a class="card wide" href="jiujitsu.html" style="text-decoration:none">
-                        <div class="icon">🥋</div>
-                        <h3>Brazilian Jiu-Jitsu</h3>
-                        <p>A long-term practice in calm problem solving, humility, adaptation, and finding out that
-                            gravity has a personal vendetta.</p>
-                    </a>
-                    <div class="card wide">
-                        <div class="icon">⚙️</div>
-                        <h3>CNC & Precision Manufacturing</h3>
-                        <p>Seven years of Fanuc CNC programming and machining experience—the foundation for my
-                            systematic debugging, tolerances, process control, and production mindset.</p>
-                    </div>
-                    <div class="card wide">
-                        <div class="icon">🛰️</div>
-                        <h3>Portable & Off-Grid Systems</h3>
-                        <p>Battery power, portable servers, radio kits, antennas, networking, and resilient field setups
-                            for POTA, ARES, and experimentation.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">© <span id="year"></span> Ethan Bennett · Built with curiosity, stubborn debugging, and
-        probably too many Docker logs.
-        <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
-    </footer>
-</body>
+        <header class="page-hero">
+    <p class="kicker">Work</p>
+    <h1>Case studies, then the rest of what I do.</h1>
+    <p class="lede">The notes are the work. Interests at the bottom are context, not projects I am selling.</p>
+</header>
+<section class="section">
+    <ul class="legend">
+    <li><span class="status status-shipped">Shipped</span> In use, by me or by someone else.</li>
+    <li><span class="status status-prototype">Prototype</span> Working, and not live or not finished.</li>
+    <li><span class="status status-planned">Planned</span> Not built yet.</li>
+</ul>
+<p class="legend-note">The label is the project as a whole. Unfinished pieces are called out inside the note.</p>
 
+    
+    
+    <ol class="study-list">
+    
+    <li>
+        <a class="study-row" href="notes/high-country-jetting/">
+            <span class="study-meta">
+                <span class="status status-prototype">Prototype</span>
+                
+            </span>
+            <span class="study-copy">
+                <span class="study-title">High Country Jetting</span>
+                <span class="study-summary">A new website for a Uintah Basin drain-cleaning business. The preview is in client review. The live domain still serves the old site.</span>
+            </span>
+            <span class="study-go">Read</span>
+        </a>
+    </li>
+    
+    <li>
+        <a class="study-row" href="notes/proxmox-homelab/">
+            <span class="study-meta">
+                <span class="status status-shipped">Shipped</span>
+                
+            </span>
+            <span class="study-copy">
+                <span class="study-title">Proxmox homelab</span>
+                <span class="study-summary">A Proxmox host and a NAS for files, media, and a few services I actually use. This note stays off the network map.</span>
+            </span>
+            <span class="study-go">Read</span>
+        </a>
+    </li>
+    
+    <li>
+        <a class="study-row" href="notes/radio-tools/">
+            <span class="study-meta">
+                <span class="status status-prototype">Prototype</span>
+                
+            </span>
+            <span class="study-copy">
+                <span class="study-title">Radio tools</span>
+                <span class="study-summary">A one-page HF band outlook for my callsign, and a planning repo for a Duchesne County emergency network that is not on the air.</span>
+            </span>
+            <span class="study-go">Read</span>
+        </a>
+    </li>
+    
+    <li>
+        <a class="study-row" href="notes/source-of-truth/">
+            <span class="study-meta">
+                <span class="status status-prototype">Prototype</span>
+                
+            </span>
+            <span class="study-copy">
+                <span class="study-title">A shared notebook for AI assistants</span>
+                <span class="study-summary">A private notes repo so Claude, ChatGPT, Grok, and Cursor start from the same project file instead of each chat inventing its own memory.</span>
+            </span>
+            <span class="study-go">Read</span>
+        </a>
+    </li>
+    
+</ol>
+
+    
+</section>
+<section class="section">
+    <div class="section-head">
+        <h2>Also</h2>
+    </div>
+    <div class="interest-grid">
+        <a class="interest" href="radio.html">
+            <p class="kicker">Radio</p>
+            <h3>Amateur radio</h3>
+            <p>General-class operator KM7CPJ. HF, portable operating, antennas, and emergency communications.</p>
+        </a>
+        <a class="interest" href="jiujitsu.html">
+            <p class="kicker">Mat</p>
+            <h3>Brazilian jiu-jitsu</h3>
+            <p>White belt, three stripes. A long practice in staying calm while a plan fails.</p>
+        </a>
+        <article class="interest">
+            <p class="kicker">Shop</p>
+            <h3>CNC machining</h3>
+            <p>Seven years of Fanuc programming. Still the night job, and still the reason I write setups down.</p>
+        </article>
+    </div>
+</section>
+
+    </main>
+    <footer class="site-footer">
+    <div class="footer-inner">
+        <p>© <span id="year">2026</span> Ethan Bennett</p>
+        <p><a href="mailto:ethanbennett136@gmail.com">ethanbennett136@gmail.com</a></p>
+    </div>
+</footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
 </html>

@@ -1,21 +1,52 @@
 ---
 title: Proxmox homelab
-date: 2026-11-11
-summary: A tour of the homelab through the decisions that make it easier to operate and recover.
-tags: [Proxmox, Linux, Self-hosting]
-draft: true
+date: 2026-11-19
+summary: A Proxmox host and a NAS for files, media, and a few services I actually use. This note stays off the network map.
+status: shipped
+role: I design it, run it, and fix it when it breaks.
+tools:
+  - Proxmox
+  - Linux
+  - Docker
+  - Jellyfin
+  - Nextcloud
+  - Tailscale
+tags:
+  - homelab
+  - Linux
+  - self-hosting
+order: 3
+draft: false
 ---
 
-## What the lab is for
+## The problem
 
-My homelab is a place to run useful services and learn what it takes to keep them running. The portfolio already covers the Docker-based media stack. This note will zoom out to the Proxmox host and show how the workloads fit together.
+I wanted one place for the services I use at home: files, media, name resolution, and a way to reach them when I am not there. A pile of one-off installs is easy to start and miserable to put back. The lab is where I practice the unglamorous part. Where does the data live, what does a service depend on, and how would I rebuild it?
 
-## Start with one workload
+## What I built
 
-I'll use one service to explain how I chose where it runs, where its data lives, and what it depends on. A topology diagram can make that clear before getting into configuration details.
+Two roles, and no map.
 
-## What I want to document
+A Proxmox host runs the always-on services. A separate NAS holds the files and the media library. Media that used to live on a portable laptop is moving onto the NAS. The laptop was a useful experiment. The NAS is where I want that library to stay.
 
-- Which workloads run in VMs or containers and why.
-- What gets backed up, how I would restore a service, and what I have verified with a test restore.
-- Where Nextcloud, Caddy, and Technitium DNS fit, with space for follow-up notes on each.
+Jellyfin serves the library. A personal cloud (Nextcloud) and file sync cover the files I want on more than one device. I run my own DNS resolver, a small homepage, and an uptime check so I notice when something is down. Remote access is Tailscale, not a set of ports forwarded on the router.
+
+I am not publishing addresses, hostnames, or a topology diagram. The point of this note is the split between compute and storage, not a map of my house.
+
+## Tools
+
+Proxmox is the host because I want a line between a service and the machine under it. Docker is for the apps that are happier as containers. The NAS is for data I do not want trapped inside a container.
+
+## Outcome
+
+The lab is running and I use it. It is not a finished build. A single reverse proxy in front of the services is still a plan. So is an offsite backup. I have not written up a restore I have actually tested, so I will not claim I can rebuild the whole thing from scratch.
+
+What I learned: decide where the data lives before you add another container. Moving a media library later is the slow part.
+
+## Still open
+
+- One front door for the services, instead of remembering how each one is reached.
+- An offsite backup, and a restore I have tried.
+- Follow-up notes on DNS and the personal cloud, still without a network map.
+
+<!-- TODO: If you add a diagram, draw roles only: host, storage, remote access. No addresses, hostnames, or interface names. -->

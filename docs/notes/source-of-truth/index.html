@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A shared notebook for AI assistants | Ethan Bennett</title>
+    <meta name="description" content="A private notes repo so Claude, ChatGPT, Grok, and Cursor start from the same project file instead of each chat inventing its own memory.">
+    
+    <meta name="theme-color" content="#f3efe6">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="../../index.html">
+            <span class="mark" aria-hidden="true"></span>
+            <span>Ethan Bennett</span>
+        </a>
+        <div class="nav-links">
+            <a href="../../projects.html">Work</a>
+            <a href="../" aria-current="page">Notes</a>
+            <a href="../../recruiter.html">Experience</a>
+            <a href="../../index.html#about">About</a>
+            <a class="nav-contact" href="../../index.html#contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+    <main id="main">
+        <article class="study">
+    <p class="back"><a href="../">All notes</a></p>
+    <p class="study-kicker">
+        <span class="status status-prototype">Prototype</span>
+        
+    </p>
+    <h1>A shared notebook for AI assistants</h1>
+    <p class="lede">A private notes repo so Claude, ChatGPT, Grok, and Cursor start from the same project file instead of each chat inventing its own memory.</p>
+    <dl class="facts">
+        
+        <div>
+            <dt>Role</dt>
+            <dd>I set the structure and keep the files current. The assistants read them and propose edits.</dd>
+        </div>
+        
+        <div>
+            <dt>Written</dt>
+            <dd>Nov 19, 2026</dd>
+        </div>
+        
+        
+    </dl>
+    <div class="study-body">
+        <h2>The problem</h2>
+<p>I work nights as a CNC machinist, and the hours I have for software are short and split up. I also use more than one AI assistant. Left alone, each chat remembers a different version of a project. I got tired of re-explaining status, and of an assistant changing something I had not asked about.</p>
+<h2>What I built</h2>
+<p>A private repository of plain Markdown. One file per project. Work and personal projects stay in different folders. Every file has the same shape: what it is, the current status, decisions, open questions, next steps, and a short changelog.</p>
+<p>A separate page describes how I like to work. A short instruction file tells an assistant how to read the repo. The rule I care about is at the end of a session: update the project file. Do not keep a second history in the chat. Do not put secrets, passwords, or a client's private contact details in the repo.</p>
+<p>The assistants I point at it are Claude, ChatGPT, Grok, and Cursor. They do not share a memory. They share a file.</p>
+<h2>Tools</h2>
+<p>Git is the sync. Markdown is the format because every tool can read it and I can edit it myself. There is no app in front of the files.</p>
+<h2>Outcome</h2>
+<p>I use the repo. It is the brief I attach when I start work on a project. That part is real.</p>
+<p>Two things I have not built: a job that syncs the files for me, and a bot that watches them and tells me when one has gone stale. The update is still a habit. It happens when I remember to do it at the end of a session, and it gets skipped when I do not. I would rather say that than imply a team of monitoring bots is running.</p>
+<p>What I learned: a shared file only works if it stays short. A changelog line is three things. What changed, what I decided, and what is next. It is not a second copy of the project.</p>
+<h2>Still open</h2>
+<!-- TODO: If a sync job or a monitoring bot exists outside this notes repo, name where it runs and what it is allowed to change. Until then, this page should keep saying they are not built. Do not link the private repo from this public site. -->
+
+    </div>
+</article>
+
+    </main>
+    <footer class="site-footer">
+    <div class="footer-inner">
+        <p>© <span id="year">2026</span> Ethan Bennett</p>
+        <p><a href="mailto:ethanbennett136@gmail.com">ethanbennett136@gmail.com</a></p>
+    </div>
+</footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
