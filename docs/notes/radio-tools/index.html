@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Radio tools | Ethan Bennett</title>
+    <meta name="description" content="A one-page HF band outlook for my callsign, and a written design for a Duchesne County emergency network.">
+    
+    <meta name="theme-color" content="#0d1117">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="../../index.html">
+            <span class="mark" aria-hidden="true"></span>
+            <span>Ethan Bennett</span>
+        </a>
+        <div class="nav-links">
+            <a href="../../projects.html">Work</a>
+            <a href="../" aria-current="page">Notes</a>
+            <a href="../../recruiter.html">Experience</a>
+            <a href="../../index.html#about">About</a>
+            <a class="nav-contact" href="../../index.html#contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+    <main id="main">
+        <article class="study">
+    <p class="back"><a href="../">All notes</a></p>
+    <p class="study-kicker">
+        <span class="status status-prototype">Prototype</span>
+        
+    </p>
+    <h1>Radio tools</h1>
+    <p class="lede">A one-page HF band outlook for my callsign, and a written design for a Duchesne County emergency network.</p>
+    <dl class="facts">
+        
+        <div>
+            <dt>Role</dt>
+            <dd>General-class operator, KM7CPJ. I built the page and wrote the design.</dd>
+        </div>
+        
+        <div>
+            <dt>Written</dt>
+            <dd>Nov 19, 2026</dd>
+        </div>
+        
+        <div>
+            <dt>Code</dt>
+            <dd><a href="https://github.com/ReptilianRex6/QRZ-Webpage" rel="noopener noreferrer">ReptilianRex6/QRZ-Webpage</a></dd>
+        </div>
+        
+        
+        <div>
+            <dt>Design repo</dt>
+            <dd><a href="https://github.com/ReptilianRex6/Duchesne-County-ARES-Map" rel="noopener noreferrer">Duchesne-County-ARES-Map</a></dd>
+        </div>
+        
+    </dl>
+    <div class="study-body">
+        <h2>The problem</h2>
+<p>I want to know if the HF bands are worth sitting down for before I turn the radio on. Public propagation sites already exist. I wanted one page with the numbers I actually look at: solar flux, the K-index, and a rough day and night read for 80 through 10 meters.</p>
+<p>Duchesne County ARES has a different problem. Emergency messages need a path when the public internet does not. I wrote that as a design other operators can read, separate from the band page.</p>
+<h2>What I built</h2>
+<p>The HF outlook is a single HTML file in <a href="https://github.com/ReptilianRex6/QRZ-Webpage">QRZ-Webpage</a>. It reads a public propagation feed and draws the bands. If the feed does not answer, the page says the data is unavailable instead of inventing a condition. The ratings are broad estimates. The page says so. They are not a promise that a contact will go through.</p>
+<p>The <a href="https://github.com/ReptilianRex6/Duchesne-County-ARES-Map">Duchesne County ARES repo</a> is the written design. It is layered: higher-capacity radio links for IP, a low-bandwidth mesh for text, optional internet backhaul, and small Linux computers at the edge. The documents are a design, not permission to climb a tower or turn a site on.</p>
+<h2>Tools</h2>
+<p>The HF page is one file so it can sit next to a callsign biography without a build step. The ARES work is documents. The design comes before any hardware.</p>
+<h2>Outcome</h2>
+<p>The HF page shows public data, or it says when the feed does not answer. The ARES repo is the design I can hand to other operators.</p>
+<p>The station is separate from these pages. I run a Yaesu FT-991A, and I spend time on portable operating, antennas, and emergency communications. That lives on the <a href="../../radio.html">amateur radio page</a>.</p>
+
+    </div>
+</article>
+
+    </main>
+    <footer class="site-footer">
+    <div class="footer-inner">
+        <p>© <span id="year">2026</span> Ethan Bennett</p>
+        <p><a href="mailto:ethanbennett136@gmail.com">ethanbennett136@gmail.com</a></p>
+    </div>
+</footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

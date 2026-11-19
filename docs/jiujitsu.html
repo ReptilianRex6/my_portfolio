@@ -1,104 +1,100 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Brazilian Jiu-Jitsu | Ethan Bennett</title>
-    <meta name="description"
-        content="How Brazilian jiu-jitsu shapes Ethan Bennett’s approach to learning and problem solving.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brazilian jiu-jitsu | Ethan Bennett</title>
+    <meta name="description" content="How Brazilian jiu-jitsu shapes Ethan Bennett’s approach to learning and problem solving.">
+    
+    <meta name="theme-color" content="#0d1117">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
 </head>
-
-<body><a class="skip" href="#main">Skip to content</a>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-    <div class="nav-inner">
-        <a class="brand" href="index.html"><span class="brand-mark">e.</span> <span>Ethan Bennett</span></a>
+        <a class="brand" href="index.html">
+            <span class="mark" aria-hidden="true"></span>
+            <span>Ethan Bennett</span>
+        </a>
         <div class="nav-links">
             <a href="projects.html">Work</a>
-            <a href="notes/">Build Notes</a>
+            <a href="notes/">Notes</a>
             <a href="recruiter.html">Experience</a>
-            <a href="index.html#contact">Contact</a>
+            <a href="index.html#about">About</a>
+            <a class="nav-contact" href="index.html#contact">Contact</a>
         </div>
-    </div>
-</nav>
+    </nav>
+</header>
 
     <main id="main">
-        <header class="hero">
-            <div class="wrap">
-                <p class="eyebrow">Brazilian Jiu-Jitsu</p>
-                <h1>Stay calm.<br>Solve the next problem.</h1>
-                <p class="lead">Jiu-jitsu is live troubleshooting: every plan meets resistance, every position gives
-                    feedback, and ego causes remarkably reproducible bugs.</p>
-                <div class="belt-status" aria-labelledby="belt-title">
-                    <div class="belt-status-heading">
-                        <span class="eyebrow" id="belt-title">Current rank</span>
-                        <span class="belt-training"><span class="status-dot" aria-hidden="true"></span> Always learning</span>
-                    </div>
-                    <div class="belt-status-body">
-                        <div class="belt-rank"><strong>White belt</strong><span>3 stripes</span></div>
-                        <div class="belt-visual" role="img" aria-label="White belt with three white tape stripes on a black rank bar">
-                            <div class="belt-fabric" aria-hidden="true"></div>
-                            <div class="belt-stripes" aria-hidden="true">
-                                <span class="earned"></span><span class="earned"></span><span class="earned"></span>
-                            </div>
-                            <div class="belt-tip" aria-hidden="true"></div>
-                        </div>
-                    </div>
-                    <p class="belt-caption">One stripe at a time. Plenty left to learn.</p>
+        <header class="page-hero">
+    <p class="kicker">Brazilian jiu-jitsu</p>
+    <h1>Stay calm. Solve the next problem.</h1>
+    <p class="lede">Live troubleshooting. Every plan meets resistance, and ego causes bugs you can reproduce.</p>
+    <div class="belt-status" aria-labelledby="belt-title">
+        <div class="belt-status-heading">
+            <span class="kicker" id="belt-title">Current rank</span>
+            <span class="belt-training"><span class="status-dot" aria-hidden="true"></span> Always learning</span>
+        </div>
+        <div class="belt-status-body">
+            <div class="belt-rank"><strong>White belt</strong><span>3 stripes</span></div>
+            <div class="belt-visual" role="img" aria-label="White belt with three white tape stripes on a black rank bar">
+                <div class="belt-fabric" aria-hidden="true"></div>
+                <div class="belt-stripes" aria-hidden="true">
+                    <span class="earned"></span><span class="earned"></span><span class="earned"></span>
                 </div>
+                <div class="belt-tip" aria-hidden="true"></div>
             </div>
-        </header>
-        <section>
-            <div class="wrap">
-                <div class="split">
-                    <div>
-                        <h2 class="section-title">What It Teaches Me</h2>
-                        <p class="section-intro">Training reinforces habits that carry directly into engineering: stay
-                            calm while something is failing, work from fundamentals, conserve energy, adapt quickly, and
-                            never confuse confidence with proof.</p>
-                        <p class="callout">The goal is not to know every technique. It is to recognize the problem,
-                            protect what matters, and improve the position one decision at a time.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Lessons From the Mat</h3>
-                        <ul>
-                            <li>Composure under pressure</li>
-                            <li>Iterative problem solving</li>
-                            <li>Learning through immediate feedback</li>
-                            <li>Respect for fundamentals</li>
-                            <li>Humility and continuous improvement</li>
-                            <li>Supporting teammates</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="wrap">
-                <h2 class="section-title">Why It Belongs Here</h2>
-                <div class="grid">
-                    <div class="card wide">
-                        <h3>Engineering Mindset</h3>
-                        <p>A failed approach is data. Reset, identify the constraint, and try a cleaner sequence instead
-                            of muscling through a broken plan.</p>
-                    </div>
-                    <div class="card wide">
-                        <h3>Long-Term Practice</h3>
-                        <p>Progress comes from consistent repetitions, good coaching, honest review, and accepting that
-                            sometimes a smaller person is about to teach you physics.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="wrap"><a class="back-link" href="projects.html">← Back to projects and interests</a></div>
-        </section>
-    </main>
-    <footer class="footer">© <span id="year"></span> Ethan Bennett · Built with curiosity, stubborn debugging, and
-        probably too many Docker logs.
-        <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
-    </footer>
-</body>
+        </div>
+        <p class="belt-caption">One stripe at a time. Plenty left to learn.</p>
+    </div>
+</header>
+<section class="section">
+    <div class="about-grid">
+        <div class="prose">
+            <h2>What it teaches me</h2>
+            <p>Stay calm while something is failing. Work from fundamentals. Conserve energy. Adapt. Do not confuse confidence with proof.</p>
+            <p>The goal is not to know every technique. It is to recognize the problem, protect what matters, and improve the position one decision at a time.</p>
+        </div>
+        <aside class="aside-card">
+            <h3>From the mat</h3>
+            <ul>
+                <li>Composure under pressure</li>
+                <li>Iterative problem solving</li>
+                <li>Learning from immediate feedback</li>
+                <li>Respect for fundamentals</li>
+                <li>Humility, on a schedule</li>
+                <li>Supporting teammates</li>
+            </ul>
+        </aside>
+    </div>
+</section>
+<section class="section">
+    <div class="interest-grid">
+        <article class="interest">
+            <h3>A failed approach is data</h3>
+            <p>Reset, find the constraint, and try a cleaner sequence. Muscling through a broken plan is how you get tired and still lose.</p>
+        </article>
+        <article class="interest">
+            <h3>Long practice</h3>
+            <p>Progress is repetitions, coaching, and honest review. Sometimes a smaller person is about to teach you physics.</p>
+        </article>
+    </div>
+    <p class="back back-spaced"><a href="projects.html">Back to work</a></p>
+</section>
 
+    </main>
+    <footer class="site-footer">
+    <div class="footer-inner">
+        <p>© <span id="year">2026</span> Ethan Bennett</p>
+        <p><a href="mailto:ethanbennett136@gmail.com">ethanbennett136@gmail.com</a></p>
+    </div>
+</footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
 </html>

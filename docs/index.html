@@ -1,196 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethan Bennett | AI Developer</title>
-    <meta name="description"
-        content="Ethan Bennett - Python-focused AI Developer building production-grade cloud applications, CI/CD pipelines, and generative AI platforms.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ethan Bennett</title>
+    <meta name="description" content="Ethan Bennett is a CNC machinist who builds websites, small web tools, and AI-assisted workflows. The notes are short case studies.">
+    
+    <meta name="theme-color" content="#0d1117">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
 </head>
-
-<body class="home">
+<body>
     <a class="skip" href="#main">Skip to content</a>
-
+    <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-    <div class="nav-inner">
-        <a class="brand" href="index.html"><span class="brand-mark">e.</span> <span>Ethan Bennett</span></a>
+        <a class="brand" href="index.html">
+            <span class="mark" aria-hidden="true"></span>
+            <span>Ethan Bennett</span>
+        </a>
         <div class="nav-links">
             <a href="projects.html">Work</a>
-            <a href="notes/">Build Notes</a>
+            <a href="notes/">Notes</a>
             <a href="recruiter.html">Experience</a>
-            <a href="index.html#contact">Contact</a>
+            <a href="index.html#about">About</a>
+            <a class="nav-contact" href="index.html#contact">Contact</a>
         </div>
-    </div>
-</nav>
-
+    </nav>
+</header>
 
     <main id="main">
-    <header class="hero home-hero" id="top">
-        <div class="hero-layout">
-            <div class="hero-content">
-                <p class="eyebrow"><span class="status-dot"></span> AI developer &amp; cloud engineer</p>
-                <h1>From possibility.<br>To <span class="accent-text">production.</span></h1>
-                <p class="tagline">I'm Ethan. I build AI-powered products and the cloud systems behind them. Thoughtful integrations. Reliable infrastructure. Software that works outside the demo.</p>
-                <div class="cta-row">
-                    <a class="btn primary" href="#projects">Explore my work <span aria-hidden="true">&#8599;</span></a>
-                    <a class="btn" href="recruiter.html">Experience &amp; skills <span aria-hidden="true">&#8599;</span></a>
-                </div>
-                <p class="hero-note">Python at the core. Curiosity everywhere else.</p>
-            </div>
-            <aside class="system-panel" aria-label="My engineering focus: product workflows, Python services, and cloud infrastructure">
-                <div class="panel-heading"><span><span class="status-dot"></span> The systems I build</span><span class="mono">PRODUCT / CLOUD</span></div>
-                <div class="system-body">
-                    <div class="system-node"><span class="node-icon">&#8599;</span><div><strong>Product &amp; experience</strong><small>Generative media &middot; Application workflows</small></div><span class="node-index">01</span></div>
-                    <div class="connector"><span>APIs &amp; asynchronous events</span></div>
-                    <div class="system-node selected"><span class="node-icon">&#8984;</span><div><strong>Python services</strong><small>AI integrations &middot; Webhooks &middot; Automation</small></div><span class="node-index">02</span></div>
-                    <div class="connector"><span>Containerized &amp; connected</span></div>
-                    <div class="system-node"><span class="node-icon">&#9636;</span><div><strong>Cloud infrastructure</strong><small>Cloud Run &middot; Firebase &middot; Docker</small></div><span class="node-index">03</span></div>
-                </div>
-                <div class="panel-footer"><span class="status-dot"></span> Built with a production mindset <span aria-hidden="true">&#8599;</span></div>
-            </aside>
-        </div>
-        <div class="stack-strip"><span class="mono">MY EVERYDAY TOOLKIT</span><span>Python</span><span>Google Cloud</span><span>Firebase</span><span>Docker</span><span>GitHub Actions</span></div>
-    </header>
+        <header class="hero">
+    <p class="kicker">Machinist · developer · KM7CPJ</p>
+    <h1>I make useful software between night shifts.</h1>
+    <p class="lede">I run Fanuc machines for a living and build websites, small tools, and AI-assisted workflows in the hours around that work. These notes are case studies: the problem, what I did, and what came of it.</p>
+    <div class="cta-row">
+        <a class="btn" href="#work">Read the work</a>
+        <a class="btn btn-ghost" href="#contact">Contact</a>
+    </div>
+    <ul class="now" aria-label="What I do">
+        <li>Nights on a Fanuc</li>
+        <li>Freelance web</li>
+        <li>Lava Studios</li>
+        <li>General class</li>
+    </ul>
+</header>
 
-    <section id="projects" class="reveal">
-        <div class="section-heading"><div><h2 class="section-title">Selected work</h2></div><a class="text-link" href="projects.html">All projects <span aria-hidden="true">&#8599;</span></a></div>
-        <div class="projects-grid">
-            <article class="project-card">
-                <div class="p-icon">Cloud</div>
-                <h3>Aisthetic Studio</h3>
-                <p>Production multi-provider image and video generation platform using Python, Cloud Run, Firebase, Docker,
-                    asynchronous callbacks, and Stripe.</p>
-                <div class="p-tags">
-                    <span class="tag">Python</span><span class="tag">GCP</span><span class="tag">GenAI</span>
-                </div>
-                
-            </article>
-            <article class="project-card">
-                <div class="p-icon">Lab</div>
-                <h3>Proxmox homelab</h3>
-                <p>Designed and maintained Docker-based media services with Jellyfin, Sonarr, Radarr, qBittorrent, Tailscale,
-                    SMB, Linux permissions, and automated storage workflows.</p>
-                <div class="p-tags">
-                    <span class="tag">Docker</span><span class="tag">Linux</span><span class="tag">Networking</span>
-                </div>
-                
-            </article>
-        </div>
-    </section>
+<section id="work" class="section">
+    <div class="section-head">
+        <h2>Selected work</h2>
+        <a href="projects.html">All work</a>
+    </div>
+    <ul class="legend">
+    <li><span class="status status-shipped">Shipped</span> In use.</li>
+    <li><span class="status status-prototype">Prototype</span> A working version.</li>
+    <li><span class="status status-planned">Planned</span> A direction.</li>
+</ul>
 
     
+    
+    <ol class="study-list">
+    
+    <li>
+        <a class="study-row" href="notes/high-country-jetting/">
+            <span class="study-meta">
+                <span class="status status-prototype">Prototype</span>
+                
+            </span>
+            <span class="study-copy">
+                <span class="study-title">High Country Jetting</span>
+                <span class="study-summary">A staging website for a Uintah Basin drain-cleaning business, with town pages and a photo admin, in client review.</span>
+            </span>
+            <span class="study-go">Read</span>
+        </a>
+    </li>
+    
+    <li>
+        <a class="study-row" href="notes/proxmox-homelab/">
+            <span class="study-meta">
+                <span class="status status-shipped">Shipped</span>
+                
+            </span>
+            <span class="study-copy">
+                <span class="study-title">Proxmox homelab</span>
+                <span class="study-summary">A Proxmox host and a NAS for files, media, and a few services I actually use. This note stays off the network map.</span>
+            </span>
+            <span class="study-go">Read</span>
+        </a>
+    </li>
+    
+    <li>
+        <a class="study-row" href="notes/radio-tools/">
+            <span class="study-meta">
+                <span class="status status-prototype">Prototype</span>
+                
+            </span>
+            <span class="study-copy">
+                <span class="study-title">Radio tools</span>
+                <span class="study-summary">A one-page HF band outlook for my callsign, and a written design for a Duchesne County emergency network.</span>
+            </span>
+            <span class="study-go">Read</span>
+        </a>
+    </li>
+    
+    <li>
+        <a class="study-row" href="notes/source-of-truth/">
+            <span class="study-meta">
+                <span class="status status-shipped">Shipped</span>
+                
+            </span>
+            <span class="study-copy">
+                <span class="study-title">A shared notebook for AI assistants</span>
+                <span class="study-summary">A private notes repo that Claude, ChatGPT, Grok, and Cursor share, with a nightly sync and a site-monitoring bot.</span>
+            </span>
+            <span class="study-go">Read</span>
+        </a>
+    </li>
+    
+</ol>
 
-    <section id="about" class="reveal">
-        <p class="eyebrow">The person behind the code</p><h2 class="section-title">A builder, by background.</h2>
-        <p class="about-text">
-            I am a Python-focused AI developer with experience building <strong>production-grade cloud applications</strong>,
-            automation, and DevOps workflows. I specialize in <strong>Python microservices</strong>,
-            <strong>Google Cloud Run</strong>, <strong>CI/CD pipelines</strong>, and <strong>Docker</strong> - developing and
-            deploying containerized applications, integrating AI APIs, and collaborating across the full software development
-            lifecycle. I transitioned from precision CNC machining into software and AI, bringing a production mindset:
-            diagnose carefully, document clearly, and build systems that work outside the demo.
-        </p>
-    </section>
+    
+</section>
 
-    <section id="experience" class="reveal">
-        <p class="eyebrow">In practice</p><h2 class="section-title">Real products. Real responsibility.</h2>
-        <div class="exp-card">
-            <div class="exp-header">
-                <h3>Lava Studios AI</h3>
-                <span class="period">2024 - Present</span>
-            </div>
-            <div class="exp-role">AI Developer · Remote - Building a multi-engine generative media platform with Google Cloud,
-                Python microservices, and FlutterFlow.</div>
-            <div class="exp-grid">
-                <div class="exp-item">
-                    <h4>Generative AI Integration</h4>
-                    <p>Connected image and video providers including Leonardo, Luma, Runway, Replicate-hosted models, and
-                        Google-based models behind unified application workflows.</p>
-                </div>
-                <div class="exp-item">
-                    <h4>Cloud Architecture</h4>
-                    <p>Built and deployed containerized services on Cloud Run with Secret Manager, Firebase authentication,
-                        Firestore data models, Storage pipelines, and webhook routing.</p>
-                </div>
-                <div class="exp-item">
-                    <h4>CI/CD Pipeline Engineering</h4>
-                    <p>Implemented Docker-based GitHub and Cloud Build deployment workflows, staged rollouts, logging,
-                        monitoring, and multi-service troubleshooting.</p>
-                </div>
-                <div class="exp-item">
-                    <h4>Product Engineering</h4>
-                    <p>Created custom FlutterFlow actions, authenticated API calls, generation history flows, Stripe lifecycle
-                        handling, and resilient asynchronous processing.</p>
-                </div>
-            </div>
+<section id="about" class="section about">
+    <div class="section-head">
+        <h2>About</h2>
+    </div>
+    <div class="about-grid">
+        <div class="prose">
+            <p>I spent seven years programming Fanuc machines before I started taking software work. The habit carried over: diagnose carefully, write the setup down, and prefer the version that still works after the demo.</p>
+            <p>Freelance web projects are the work I can show end to end. At Lava Studios I work on Aisthetic, a generative image and video product, mostly on the service and cloud side.</p>
+            <p>I hold a General-class amateur radio license, <a href="radio.html">KM7CPJ</a>, and I train <a href="jiujitsu.html">Brazilian jiu-jitsu</a>.</p>
         </div>
-    </section>
+        <aside class="aside-card">
+            <h3>On this site</h3>
+            <ul>
+                <li><a href="projects.html">Case studies and interests</a></li>
+                <li><a href="recruiter.html">Experience, in short</a></li>
+                <li><a href="notes/">Build notes</a></li>
+            </ul>
+        </aside>
+    </div>
+</section>
 
-    <section id="skills" class="reveal">
-        <p class="eyebrow">The toolkit</p><h2 class="section-title">Tools with a purpose.</h2>
-        <div class="skills-grid">
-            <div class="skill-group">
-                <h3>Languages</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>Dart (FlutterFlow)</li>
-                    <li>HTML and CSS</li>
-                    <li>Fanuc CNC (7 years)</li>
-                    <li>Spanish</li>
-                </ul>
-            </div>
-            <div class="skill-group">
-                <h3>Cloud and Deployment</h3>
-                <ul>
-                    <li>Google Cloud Run</li>
-                    <li>Cloud Functions</li>
-                    <li>Firestore and Firebase Storage</li>
-                    <li>Secret Manager</li>
-                    <li>Docker</li>
-                </ul>
-            </div>
-            <div class="skill-group">
-                <h3>DevOps and Tooling</h3>
-                <ul>
-                    <li>GitHub Actions CI/CD</li>
-                    <li>Cloud Build workflows</li>
-                    <li>Git and GitHub</li>
-                    <li>Logging and monitoring pipelines</li>
-                </ul>
-            </div>
-            <div class="skill-group">
-                <h3>Engineering</h3>
-                <ul>
-                    <li>REST APIs and webhooks</li>
-                    <li>OAuth and JWT auth flows</li>
-                    <li>Stripe billing lifecycle handling</li>
-                    <li>Cross-stack debugging and architecture ownership</li>
-                </ul>
-            </div>
+<section id="contact" class="section contact">
+    <div class="contact-panel">
+        <p class="kicker">Contact</p>
+        <h2>Email is the reliable way to reach me.</h2>
+        <p class="lede">I read it. I am open to Python, cloud, and product work, and to the occasional small web project.</p>
+        <div class="cta-row">
+            <a class="btn" href="mailto:ethanbennett136@gmail.com">ethanbennett136@gmail.com</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/ethan-bennett-7599742a1" rel="noopener noreferrer">LinkedIn</a>
         </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <p class="eyebrow">Have something in mind?</p><h2 class="section-title">Let&#8217;s build something useful.</h2>
-        <p>Open to AI, Python, cloud, platform engineering, and technically ambitious product roles.</p>
-        <div class="contact-links">
-            <a class="btn primary" href="mailto:ethanbennett136@gmail.com">Email Me</a>
-            <a class="btn" href="https://www.linkedin.com/in/ethan-bennett-7599742a1" target="_blank"
-                rel="noopener">LinkedIn</a>
-        </div>
-    </section>
+    </div>
+</section>
 
     </main>
-    <footer>
-        &copy; <span id="year"></span> Ethan Bennett · Built with <span class="heart">&#9829;</span> and deployed on Firebase
-    </footer>
-
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <footer class="site-footer">
+    <div class="footer-inner">
+        <p>© <span id="year">2026</span> Ethan Bennett</p>
+        <p><a href="mailto:ethanbennett136@gmail.com">ethanbennett136@gmail.com</a></p>
+    </div>
+</footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
-
 </html>

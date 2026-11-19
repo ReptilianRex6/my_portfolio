@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>High Country Jetting | Ethan Bennett</title>
+    <meta name="description" content="A staging website for a Uintah Basin drain-cleaning business, with town pages and a photo admin, in client review.">
+    
+    <meta name="theme-color" content="#0d1117">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="../../index.html">
+            <span class="mark" aria-hidden="true"></span>
+            <span>Ethan Bennett</span>
+        </a>
+        <div class="nav-links">
+            <a href="../../projects.html">Work</a>
+            <a href="../" aria-current="page">Notes</a>
+            <a href="../../recruiter.html">Experience</a>
+            <a href="../../index.html#about">About</a>
+            <a class="nav-contact" href="../../index.html#contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+    <main id="main">
+        <article class="study">
+    <p class="back"><a href="../">All notes</a></p>
+    <p class="study-kicker">
+        <span class="status status-prototype">Prototype</span>
+        
+    </p>
+    <h1>High Country Jetting</h1>
+    <p class="lede">A staging website for a Uintah Basin drain-cleaning business, with town pages and a photo admin, in client review.</p>
+    <dl class="facts">
+        
+        <div>
+            <dt>Role</dt>
+            <dd>Freelance developer. I designed and built the site and the photo admin.</dd>
+        </div>
+        
+        <div>
+            <dt>Written</dt>
+            <dd>Nov 19, 2026</dd>
+        </div>
+        
+        <div>
+            <dt>Code</dt>
+            <dd><a href="https://github.com/ReptilianRex6/high-country-jetting" rel="noopener noreferrer">ReptilianRex6/high-country-jetting</a></dd>
+        </div>
+        
+        
+        <div>
+            <dt>Current public site</dt>
+            <dd><a href="https://www.highcountryjetting.com/" rel="noopener noreferrer">highcountryjetting.com</a></dd>
+        </div>
+        
+    </dl>
+    <div class="study-body">
+        <h2>The problem</h2>
+<p>High Country Jetting cleans drains and sewers in Utah's Uintah Basin. The business already has a public website, and that domain is still the one visitors get. The owner needed a clearer site: what the company does, where it works, and a way to put real job photos up without asking a developer every time.</p>
+<p>The owner is not a web developer. Anything I add has to be obvious on a phone, and the ongoing hosting bill has to be one the business can see and pay.</p>
+<h2>What I built</h2>
+<p>A static multi-page site on Firebase Hosting: home, drain and sewer services, other property work, a recent-work gallery, and contact. The staging site has town pages for Vernal, Roosevelt, and Duchesne, and the service area runs from Fruitland to Jensen. The owner supplied a logo and photos. The site uses the photos they approved, as smaller WebP files, and leaves the original camera files out of what gets deployed.</p>
+<p>The staging site is in client review. The public domain still serves the previous site, so this page links that domain and not the staging address.</p>
+<p>The public pages do not link to an admin screen. The owner signs in with Google, posts a photo, and can delete it. The file goes to Cloud Storage and the record goes to Firestore. Upload and delete have been checked on staging.</p>
+<p>&quot;Write it for me&quot; drafts a caption the owner can edit before a photo is public. The suggestion comes from Firebase AI Logic. App Check sits in front of the Firebase calls.</p>
+<h2>Tools</h2>
+<p>Static HTML keeps the public pages simple to host. Firebase is there for the parts that change after launch: sign-in, photos, and caption suggestions. There is no separate CMS for the owner to learn.</p>
+<h2>Outcome</h2>
+<p>Sign-in, posting a photo, deleting a photo, and caption suggestions work on the staging site. The town pages and the Fruitland-to-Jensen service area are on that staging site too.</p>
+<p>What I learned: the useful version is the one the owner can update from a phone, on one bill, without me in the middle.</p>
+
+    </div>
+</article>
+
+    </main>
+    <footer class="site-footer">
+    <div class="footer-inner">
+        <p>© <span id="year">2026</span> Ethan Bennett</p>
+        <p><a href="mailto:ethanbennett136@gmail.com">ethanbennett136@gmail.com</a></p>
+    </div>
+</footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,87 +1,42 @@
 ---
 permalink: /projects.html
+title: Work
+description: Case studies and interests from Ethan Bennett. Each project is labeled shipped, prototype, or planned.
+layout: base.njk
 ---
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Projects & Interests | Ethan Bennett</title>
-    <meta name="description"
-        content="Projects, homelab work, radio, jiu-jitsu, and technical interests of Ethan Bennett.">
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body><a class="skip" href="#main">Skip to content</a>
-    {% include "nav.njk" %}
-    <main id="main">
-        <header class="hero">
-            <div class="wrap">
-                <p class="eyebrow">Projects & Interests</p>
-                <h1>A little curiosity.<br>A lot of building.</h1>
-                <p class="lead">A wider look at what I build, troubleshoot, operate, and obsessively research after
-                    saying, “this should be easy.”</p>
-            </div>
-        </header>
-        <section>
-            <div class="wrap">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="grid">
-                    <div class="card wide">
-                        <div class="icon">🌋</div>
-                        <h3>Aisthetic Studio</h3>
-                        <p>Production multi-provider image and video generation platform using Python, Cloud Run,
-                            Firebase, Docker, asynchronous callbacks, and Stripe.</p>
-                        <div class="tags"><span class="tag">Python</span><span class="tag">GCP</span><span
-                                class="tag">GenAI</span></div>
-                    </div>
-                    <div class="card wide">
-                        <div class="icon">🖥️</div>
-                        <h3>Proxmox homelab</h3>
-                        <p>Designed and maintained Docker-based media services with Jellyfin, Sonarr, Radarr,
-                            qBittorrent, Tailscale, SMB, Linux permissions, and automated storage workflows.</p>
-                        <div class="tags"><span class="tag">Docker</span><span class="tag">Linux</span><span
-                                class="tag">Networking</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="wrap">
-                <h2 class="section-title">Interests</h2>
-                <div class="grid">
-                    <a class="card wide" href="radio.html" style="text-decoration:none">
-                        <div class="icon">📻</div>
-                        <h3>Amateur Radio</h3>
-                        <p>General-class operator KM7CPJ exploring HF, satellites, emergency communications, antennas,
-                            digital modes, Meshtastic, and portable operations.</p>
-                    </a><a class="card wide" href="jiujitsu.html" style="text-decoration:none">
-                        <div class="icon">🥋</div>
-                        <h3>Brazilian Jiu-Jitsu</h3>
-                        <p>A long-term practice in calm problem solving, humility, adaptation, and finding out that
-                            gravity has a personal vendetta.</p>
-                    </a>
-                    <div class="card wide">
-                        <div class="icon">⚙️</div>
-                        <h3>CNC & Precision Manufacturing</h3>
-                        <p>Seven years of Fanuc CNC programming and machining experience—the foundation for my
-                            systematic debugging, tolerances, process control, and production mindset.</p>
-                    </div>
-                    <div class="card wide">
-                        <div class="icon">🛰️</div>
-                        <h3>Portable & Off-Grid Systems</h3>
-                        <p>Battery power, portable servers, radio kits, antennas, networking, and resilient field setups
-                            for POTA, ARES, and experimentation.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">© <span id="year"></span> Ethan Bennett · Built with curiosity, stubborn debugging, and
-        probably too many Docker logs.
-        <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
-    </footer>
-</body>
-
-</html>
+<header class="page-hero">
+    <p class="kicker">Work</p>
+    <h1>Case studies, then the rest of what I do.</h1>
+    <p class="lede">The notes are the work. Interests at the bottom are context, not projects I am selling.</p>
+</header>
+<section class="section">
+    {% include "legend.njk" %}
+    {% if collections.notes.length %}
+    {% set notes = collections.notes %}
+    {% include "notes-list.njk" %}
+    {% else %}
+    <p>No notes on this page.</p>
+    {% endif %}
+</section>
+<section class="section">
+    <div class="section-head">
+        <h2>Also</h2>
+    </div>
+    <div class="interest-grid">
+        <a class="interest" href="{{ 'radio.html' | siteLink(page.url) }}">
+            <p class="kicker">Radio</p>
+            <h3>Amateur radio</h3>
+            <p>General-class operator KM7CPJ. HF, portable operating, antennas, and emergency communications.</p>
+        </a>
+        <a class="interest" href="{{ 'jiujitsu.html' | siteLink(page.url) }}">
+            <p class="kicker">Mat</p>
+            <h3>Brazilian jiu-jitsu</h3>
+            <p>White belt, three stripes. A long practice in staying calm while a plan fails.</p>
+        </a>
+        <article class="interest">
+            <p class="kicker">Shop</p>
+            <h3>CNC machining</h3>
+            <p>Seven years of Fanuc programming. Still the night job, and still the reason I write setups down.</p>
+        </article>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if title %}{{ title | escape }} | Ethan Bennett{% else %}Ethan Bennett{% endif %}</title>
+    <meta name="description" content="{{ (description or summary or site.description) | escape }}">
+    {% if draft %}<meta name="robots" content="noindex">{% endif %}
+    <meta name="theme-color" content="#0d1117">
+    <link rel="icon" href="{{ 'favicon.svg' | siteLink(page.url) }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ 'styles.css' | siteLink(page.url) }}">
+</head>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    {% include "nav.njk" %}
+    <main id="main">
+        {{ content | safe }}
+    </main>
+    {% include "footer.njk" %}
+</body>
+</html>

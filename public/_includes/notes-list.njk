@@ -1,10 +1,17 @@
-<div class="projects-grid">
+<ol class="study-list">
     {% for note in notes %}
-    <a class="project-card" href="{{ note.url | siteLink(page.url) }}">
-        <p class="eyebrow">{% if note.data.draft %}Draft{% else %}{{ note.date | noteDate }}{% endif %}</p>
-        <h3>{{ note.data.title | escape }}</h3>
-        <p>{{ note.data.summary | escape }}</p>
-    </a>
+    <li>
+        <a class="study-row" href="{{ note.url | siteLink(page.url) }}">
+            <span class="study-meta">
+                <span class="status status-{{ note.data.status or 'prototype' }}">{{ (note.data.status or 'prototype') | statusLabel }}</span>
+                {% if note.data.draft %}<span class="status status-draft">Draft</span>{% endif %}
+            </span>
+            <span class="study-copy">
+                <span class="study-title">{{ note.data.title | escape }}</span>
+                <span class="study-summary">{{ note.data.summary | escape }}</span>
+            </span>
+            <span class="study-go">Read</span>
+        </a>
+    </li>
     {% endfor %}
-</div>
-
+</ol>
