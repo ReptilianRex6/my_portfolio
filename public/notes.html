@@ -1,0 +1,33 @@
+---
+permalink: /notes/index.html
+---
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Project write-ups and engineering notes by Ethan Bennett.">
+    <title>Build Notes | Ethan Bennett</title>
+    <link rel="stylesheet" href="{{ 'styles.css' | siteLink(page.url) }}">
+</head>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    {% include "nav.njk" %}
+    <main id="main">
+        <header class="hero">
+            <div class="wrap">
+                <h1>Build Notes</h1>
+                <p class="lead">Project write-ups and lessons from building and operating software.</p>
+            </div>
+        </header>
+        <section class="wrap" aria-label="Articles">
+            {% if collections.notes.length %}
+            {% set notes = collections.notes %}
+            {% include "notes-list.njk" %}
+            {% else %}
+            <p>The first write-ups are in progress. In the meantime, <a class="text-link" href="{{ 'projects.html' | siteLink(page.url) }}">explore my work</a>.</p>
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>

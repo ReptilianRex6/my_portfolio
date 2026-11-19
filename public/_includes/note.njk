@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ summary | escape }}">
+    {% if draft %}<meta name="robots" content="noindex">{% endif %}
+    <title>{{ title | escape }} | Ethan Bennett</title>
+    <link rel="stylesheet" href="{{ 'styles.css' | siteLink(page.url) }}">
+</head>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    {% include "nav.njk" %}
+    <main id="main">
+        <article class="note">
+            <p><a class="text-link" href="{{ 'notes/' | siteLink(page.url) }}">All build notes</a></p>
+            <p class="eyebrow">{% if draft %}Draft{% else %}{{ page.date | noteDate }}{% endif %}</p>
+            <h1>{{ title | escape }}</h1>
+            <p class="lead">{{ summary | escape }}</p>
+            <div class="p-tags">{% for tag in tags %}<span class="tag">{{ tag | escape }}</span>{% endfor %}</div>
+            <div class="note-content">{{ content | safe }}</div>
+        </article>
+    </main>
+</body>
+</html>

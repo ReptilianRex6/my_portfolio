@@ -1,0 +1,11 @@
+<nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+        <a class="brand" href="{{ 'index.html' | siteLink(page.url) }}"><span class="brand-mark">e.</span> <span>Ethan Bennett</span></a>
+        <div class="nav-links">
+            <a href="{{ 'projects.html' | siteLink(page.url) }}"{% if page.url == '/projects.html' %} aria-current="page"{% endif %}>Work</a>
+            <a href="{{ 'notes/' | siteLink(page.url) }}"{% if page.url == '/notes/' %} aria-current="page"{% endif %}>Build Notes</a>
+            <a href="{{ 'recruiter.html' | siteLink(page.url) }}"{% if page.url == '/recruiter.html' %} aria-current="page"{% endif %}>Experience</a>
+            <a href="{{ 'index.html#contact' | siteLink(page.url) }}">Contact</a>
+        </div>
+    </div>
+</nav>

@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - "public/**"
+      - "eleventy.config.cjs"
+      - "package*.json"
+      - "scripts/clean-build.cjs"
       - ".github/workflows/sync-docs.yml"
 
 permissions:
@@ -17,21 +20,28 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Sync public to docs
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+
+      - name: Sync the generated site to docs
         run: |
           mkdir -p docs
-          rsync -av --delete public/ docs/
+          rsync -av --delete _site/ docs/
           touch docs/.nojekyll
 
       - name: Commit and push changes
         run: |
-          if git diff --quiet -- docs; then
+          git add docs
+          if git diff --cached --quiet -- docs; then
             echo "No docs changes to commit."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs
           git commit -m "chore: sync docs from public"
           git push

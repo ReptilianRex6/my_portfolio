@@ -1,0 +1,11 @@
+{
+  "name": "ethan-bennett-portfolio",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/clean-build.cjs && eleventy",
+    "preview": "eleventy --serve --output=.preview"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.8"
+  }
+}

@@ -1,58 +1,22 @@
-# my_portfolio
+# Ethan Bennett’s portfolio
 
-Ethan Bennett's portfolio site — static HTML/CSS/JS, deployed to Firebase Hosting via GitHub Actions.
+Eleventy builds the portfolio into static HTML and CSS.
 
-It can also be deployed with GitHub Pages using the docs folder.
-
-## Structure
-
-- `public/` — primary source files while developing
-- `docs/` — GitHub Pages publish folder (copy of `public/`)
-- `firebase.json` — Firebase Hosting config
-- `.firebaserc` — Firebase project alias
-- `.github/workflows/firebase-deploy.yml` — CI/CD: deploys to live on push to `main`, creates preview channels on PRs
-
-## GitHub Pages setup
-
-1. In the repo, open Settings > Pages.
-2. Under Build and deployment, choose:
-   - Source: Deploy from a branch
-   - Branch: main
-   - Folder: /docs
-3. Save. GitHub will publish from docs/index.html.
-
-Your site URL will be:
-- https://reptilianrex6.github.io/my_portfolio/
-
-## Keep docs in sync after edits
-
-This repo now includes [sync-docs workflow](.github/workflows/sync-docs.yml) that automatically copies `public/` to `docs/` on pushes to `main`.
-
-If you want to sync locally before pushing, you can still run:
+## Work locally
 
 ```powershell
-Copy-Item -Path "public\*" -Destination "docs" -Recurse -Force
+npm ci
+npm run preview
 ```
 
-Optional: add a script or workflow later to automate this copy.
+Open the local address printed by Eleventy. Preview includes drafts and watches for changes. Edit the pages and stylesheet in `public/` and the shared navigation and article templates in `public/_includes/`.
 
-## One-time setup
+## Write a build note
 
-1. Create a Firebase project at https://console.firebase.google.com and enable Hosting.
-2. Replace `YOUR_FIREBASE_PROJECT_ID` in `.firebaserc` and `.github/workflows/firebase-deploy.yml` with your project ID.
-3. Create a service account key for CI:
-   ```
-   firebase init hosting:github
-   ```
-   (easiest — it creates the `FIREBASE_SERVICE_ACCOUNT` secret in your repo automatically)
+Create a Markdown file under `public/notes/`. The filename becomes the URL slug. Add `title`, `date` (YYYY-MM-DD), `summary`, `tags`, and `draft: true` at the top, following either starter draft. Once the post is ready, set the publication date and change `draft` to `false`. The Build Notes index and the latest notes on the homepage update automatically.
 
-   Or manually: in GCP Console create a service account with the **Firebase Hosting Admin** role, download its JSON key, and add it as a GitHub repo secret named `FIREBASE_SERVICE_ACCOUNT`.
-4. Push to `main` — the workflow deploys automatically.
+## Build and deploy
 
-## Local preview
+Run `npm run build` to generate the public site in `_site/`. The production build excludes drafts from the output and listings. The Firebase workflow builds before deploying. The Firebase project ID in the workflow is still a placeholder and needs a configured project before that path can deploy.
 
-```
-npx firebase-tools emulators:start --only hosting
-```
-
-or just open `public/index.html` in a browser.
+The GitHub Pages branch setup uses `main` and `/docs`, including `docs/.nojekyll`. If Pages is your host, include updated `docs/` output in the publishing commit. Run the production build, copy its output into `docs/`, and remove any stale generated pages. The repository's sync workflow also mirrors the production build to `docs/`.

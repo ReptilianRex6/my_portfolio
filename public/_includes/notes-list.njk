@@ -1,0 +1,10 @@
+<div class="projects-grid">
+    {% for note in notes %}
+    <a class="project-card" href="{{ note.url | siteLink(page.url) }}">
+        <p class="eyebrow">{% if note.data.draft %}Draft{% else %}{{ note.date | noteDate }}{% endif %}</p>
+        <h3>{{ note.data.title | escape }}</h3>
+        <p>{{ note.data.summary | escape }}</p>
+    </a>
+    {% endfor %}
+</div>
+
