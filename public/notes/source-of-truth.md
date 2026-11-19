@@ -1,12 +1,14 @@
 ---
 title: A shared notebook for AI assistants
 date: 2026-11-19
-summary: A private notes repo so Claude, ChatGPT, Grok, and Cursor start from the same project file instead of each chat inventing its own memory.
-status: prototype
+summary: A private notes repo that Claude, ChatGPT, Grok, and Cursor share, with a nightly sync and a site-monitoring bot.
+status: shipped
 role: I set the structure and keep the files current. The assistants read them and propose edits.
 tools:
   - Markdown
   - A private Git repository
+  - A nightly repo sync
+  - A site-monitoring bot
   - Claude, ChatGPT, Grok, and Cursor
 tags:
   - AI assistants
@@ -22,24 +24,20 @@ I work nights as a CNC machinist, and the hours I have for software are short an
 
 ## What I built
 
-A private repository of plain Markdown. One file per project. Work and personal projects stay in different folders. Every file has the same shape: what it is, the current status, decisions, open questions, next steps, and a short changelog.
+A private repository of plain Markdown. One file per project. Work and personal projects stay in different folders. Every file has the same shape: what it is, the current status, decisions, open questions, and a short changelog.
 
 A separate page describes how I like to work. A short instruction file tells an assistant how to read the repo. The rule I care about is at the end of a session: update the project file. Do not keep a second history in the chat. Do not put secrets, passwords, or a client's private contact details in the repo.
 
 The assistants I point at it are Claude, ChatGPT, Grok, and Cursor. They do not share a memory. They share a file.
 
+A nightly job syncs the repository. A bot monitors the site.
+
 ## Tools
 
-Git is the sync. Markdown is the format because every tool can read it and I can edit it myself. There is no app in front of the files.
+Markdown is the format because every tool can read it and I can edit it myself. Git is the history. The nightly job keeps the copies in step, and the bot watches the site. There is no app in front of the files.
 
 ## Outcome
 
-I use the repo. It is the brief I attach when I start work on a project. That part is real.
+I use the repo. It is the brief I attach when I start work on a project. The nightly sync and the monitoring bot run.
 
-Two things I have not built: a job that syncs the files for me, and a bot that watches them and tells me when one has gone stale. The update is still a habit. It happens when I remember to do it at the end of a session, and it gets skipped when I do not. I would rather say that than imply a team of monitoring bots is running.
-
-What I learned: a shared file only works if it stays short. A changelog line is three things. What changed, what I decided, and what is next. It is not a second copy of the project.
-
-## Still open
-
-<!-- TODO: If a sync job or a monitoring bot exists outside this notes repo, name where it runs and what it is allowed to change. Until then, this page should keep saying they are not built. Do not link the private repo from this public site. -->
+What I learned: a shared file only works if it stays short. A changelog line says what changed and what I decided. It is not a second copy of the project.

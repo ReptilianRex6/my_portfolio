@@ -29,7 +29,7 @@ layout: base.njk
     {% set notes = collections.notes %}
     {% include "notes-list.njk" %}
     {% else %}
-    <p>The first write-ups are in progress. <a href="{{ 'projects.html' | siteLink(page.url) }}">See interests in the meantime.</a></p>
+    <p>No notes on this page. <a href="{{ 'projects.html' | siteLink(page.url) }}">See interests.</a></p>
     {% endif %}
 </section>
 

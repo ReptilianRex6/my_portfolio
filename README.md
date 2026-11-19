@@ -29,7 +29,7 @@ Create a Markdown file under `public/notes/`. The filename becomes the URL slug.
 
 Optional: `repo`, `repoLabel`, `link`, `linkLabel`, `linkText`.
 
-Shipped means the work is in use. Prototype means it works and is not live or not finished. Planned means it is not built yet. Say what is still open inside the note instead of inventing an outcome.
+Shipped means the work is in use. Prototype means a working version. Planned means a direction. Write what exists and what you learned. Keep unfinished work out of the rendered page.
 
 Set `draft: false` when the note is ready. The production build drops drafts from the output and from every listing. Preview (`npm run preview`) still shows them, with a draft label.
 

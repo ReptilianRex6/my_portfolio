@@ -7,7 +7,7 @@ layout: base.njk
 <header class="page-hero">
     <p class="kicker">Build notes</p>
     <h1>What I ran into, and what I did about it.</h1>
-    <p class="lede">One note per project. A draft stays off this page until it is ready to read.</p>
+    <p class="lede">One note per project.</p>
 </header>
 <section class="section" aria-label="Articles">
     {% include "legend.njk" %}
@@ -15,6 +15,6 @@ layout: base.njk
     {% set notes = collections.notes %}
     {% include "notes-list.njk" %}
     {% else %}
-    <p>The first write-ups are in progress. In the meantime, <a href="{{ 'projects.html' | siteLink(page.url) }}">see interests</a>.</p>
+    <p>No notes on this page. <a href="{{ 'projects.html' | siteLink(page.url) }}">See interests</a>.</p>
     {% endif %}
 </section>
