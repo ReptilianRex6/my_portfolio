@@ -15,22 +15,36 @@ layout: base.njk
 </header>
 <section class="section">
     <div class="about-grid">
-        <div class="prose">
-            <h2>Why radio</h2>
-            <p>It mixes electronics, antennas, emergency readiness, and a community that will tell you when your signal is bad. That last part is the same as software: reduce the noise and make a connection you can count on.</p>
-            <p>The station today is a Yaesu FT-991A, an antenna analyzer, a tuner, and whatever wire I am trying this month. Portable work is a battery, a compact kit, and a plan for Parks on the Air. Digital experiments include FreeDV, packet, and Meshtastic nodes for when the internet is not the path.</p>
+        <div class="station-copy">
+            <div class="prose">
+                <h2>Why radio</h2>
+                <p>It mixes electronics, antennas, emergency readiness, and a community that will tell you when your signal is bad. That last part is the same as software: reduce the noise and make a connection you can count on.</p>
+                <p>The station today is a Yaesu FT-991A, an antenna analyzer, a tuner, and whatever wire I am trying this month. Portable work is a battery, a compact kit, and a plan for Parks on the Air. Digital experiments include FreeDV, packet, and Meshtastic nodes for when the internet is not the path.</p>
+                <p>The vertical in the photo is the station antenna right now: a guyed mast on a base plate, with the guys tied off in the grass.</p>
+            </div>
+            <aside class="aside-card">
+                <h3>Current interests</h3>
+                <ul>
+                    <li>HF voice and digital</li>
+                    <li>Parks on the Air</li>
+                    <li>Satellite and ISS contacts</li>
+                    <li>ARES and emergency communications</li>
+                    <li>Antenna building and tuning</li>
+                    <li>Meshtastic and off-grid data</li>
+                </ul>
+            </aside>
         </div>
-        <aside class="aside-card">
-            <h3>Current interests</h3>
-            <ul>
-                <li>HF voice and digital</li>
-                <li>Parks on the Air</li>
-                <li>Satellite and ISS contacts</li>
-                <li>ARES and emergency communications</li>
-                <li>Antenna building and tuning</li>
-                <li>Meshtastic and off-grid data</li>
-            </ul>
-        </aside>
+        <figure class="station-photo">
+            <img
+                src="{{ 'images/km7cpj-guyed-vertical-1600.webp' | siteLink(page.url) }}"
+                srcset="{{ 'images/km7cpj-guyed-vertical-800.webp' | siteLink(page.url) }} 450w, {{ 'images/km7cpj-guyed-vertical-1600.webp' | siteLink(page.url) }} 901w"
+                sizes="(max-width: 800px) calc(100vw - 2.5rem), 24rem"
+                width="901"
+                height="1600"
+                alt="A tall guyed vertical antenna in a grassy field under a blue sky. Orange guy lines run from the silver mast to the ground, with autumn trees and a rocky hill behind it."
+                decoding="async">
+            <figcaption>Guyed vertical at the station, KM7CPJ.</figcaption>
+        </figure>
     </div>
 </section>
 <section class="section">
