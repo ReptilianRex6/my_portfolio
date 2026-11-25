@@ -407,6 +407,30 @@ h1 {
     align-items: start;
 }
 
+.station-copy .aside-card {
+    margin-top: 1.5rem;
+}
+
+.station-photo {
+    margin: 0;
+}
+
+.station-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    border-radius: 1.1rem;
+    background: var(--paper-raised);
+}
+
+.station-photo figcaption {
+    margin-top: 0.65rem;
+    color: var(--faint);
+    font-size: 0.92rem;
+    line-height: 1.45;
+}
+
 .interest-grid,
 .exp-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

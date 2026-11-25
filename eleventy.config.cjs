@@ -11,6 +11,7 @@ module.exports = function (config) {
 
   config.addPassthroughCopy("public/styles.css");
   config.addPassthroughCopy("public/favicon.svg");
+  config.addPassthroughCopy("public/images");
   config.addCollection("notes", (collection) =>
     collection
       .getFilteredByGlob("public/notes/*.md")
